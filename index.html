@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vynox – Missiya platforma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="logo">Vynox</div>
+        <div class="tagline">Missiyalarni bajar, mukofotni ol 🔥</div>
+    </header>
+
+    <main>
+        <!-- Ro'yxatdan o'tish bo'limi -->
+        <section class="card" id="auth-section">
+            <h2>Vynox – Ro'yxatdan o'tish</h2>
+            <p class="muted">
+                Missiyalarni olish uchun avval Vynox tizimida ro'yxatdan o'tishingiz kerak.
+            </p>
+
+            <form id="register-form">
+                <label>
+                    Email:
+                    <input type="email" id="email" placeholder="example@gmail.com" required>
+                </label>
+
+                <label>
+                    Parol:
+                    <input type="password" id="password" placeholder="Kamida 6 ta belgi" required minlength="6">
+                </label>
+
+                <button type="submit" class="btn primary">Ro'yxatdan o'tish</button>
+            </form>
+
+            <div id="auth-message" class="info"></div>
+        </section>
+
+        <!-- Foydalanuvchi paneli -->
+        <section class="card hidden" id="user-panel">
+            <h2>Xush kelibsiz, <span id="user-email"></span> 🎉</h2>
+            <p class="muted">
+                Endi siz Vynox missiyalarini qabul qilishingiz mumkin. Missiyani olganingizda siz Telegram'dagi botga yo'naltirilasiz.
+            </p>
+            <button id="logout-btn" class="btn danger small">Chiqish</button>
+        </section>
+
+        <!-- Missiyalar bo'limi -->
+        <section class="card" id="missions-section">
+            <h2>Aktiv missiyalar</h2>
+            <p class="muted">
+                Missiyani olish uchun ro'yxatdan o'tgan bo'lishingiz shart. Har bir missiya alohida <b>start parametri</b> bilan Telegram botga yuboriladi.
+            </p>
+
+            <div class="missions">
+                <!-- Missiya 1 -->
+                <div class="mission">
+                    <h3>1. Kanalga obuna bo'lish</h3>
+                    <p>Kanalga obuna bo'ling va screenshot yuboring.</p>
+                    <button class="btn secondary mission-btn" data-mission="mission1">
+                        Missiyani olish
+                    </button>
+                </div>
+
+                <!-- Missiya 2 -->
+                <div class="mission">
+                    <h3>2. Postni tarqatish</h3>
+                    <p>Berilgan postni 5 ta do'stingizga yuboring.</p>
+                    <button class="btn secondary mission-btn" data-mission="mission2">
+                        Missiyani olish
+                    </button>
+                </div>
+
+                <!-- Missiya 3 -->
+                <div class="mission">
+                    <h3>3. Fikr yozish</h3>
+                    <p>Biz haqimizda ijobiy fikr qoldiring.</p>
+                    <button class="btn secondary mission-btn" data-mission="mission3">
+                        Missiyani olish
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © <span id="year"></span> Vynox. Barcha huquqlar himoyalangan.
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
